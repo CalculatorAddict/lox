@@ -8,4 +8,8 @@ clean:
 	rm -f main
 	rm -rf *.dSYM
 
-.PHONY: build clean run
+commit: clean
+	git add .
+	git commit -m "$(MSG)"
+
+.PHONY: build clean commit run
